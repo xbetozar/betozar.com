@@ -10,5 +10,9 @@
   </head>
   <body>
     <h1 class="text-blue-400 text-5xl">betozar.com</h1>
+    <div x-data="{ open: true, message: 'Alpine Works!' }">
+      <button @click="open = !open" x-text="!open ? 'Show' : 'Hide'"></button>
+      <h1 x-show="open" x-text="message"></h1>
+    </div>
   </body>
 </html>
